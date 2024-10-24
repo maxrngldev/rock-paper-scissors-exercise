@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Practice Game</title>
+  </head>
+  <body>
+    <div class="game-container">
+      <div class="player__container">
+        <p id="player-win-count" class="player__win-count">0</p>
+        <img
+          src="/assets/scissors.png"
+          alt="Player choice image"
+          id="player-img"
+          class="player__img"
+        />
+        <div class="player__buttons">
+          <button id="btn-paper" class="btn__option" disabled>
+            <img src="/assets/paper.png" alt="Paper image" />
+          </button>
+          <button id="btn-rock" class="btn__option" disabled>
+            <img src="/assets/rock.png" alt="Rock image" />
+          </button>
+          <button id="btn-scissors" class="btn__option" disabled>
+            <img src="/assets/scissors.png" alt="Scissors image" />
+          </button>
+        </div>
+      </div>
+      <div class="actions__container">
+        <p id="timer" class="actions__time-counter">5</p>
+        <button id="btn-start" class="btn__action">Start</button>
+        <button id="btn-reset" class="btn__action">Reset</button>
+      </div>
+      <div class="npc__container">
+        <p id="npc-win-count" class="npc__win-count">0</p>
+        <img
+          src="/assets/rock.png"
+          alt="NPC choice image"
+          id="npc-img"
+          class="npc__img"
+        />
+      </div>
+    </div>
+  </body>
+  <script src="index.js"></script>
+</html>

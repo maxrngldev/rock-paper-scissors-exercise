@@ -1,0 +1,55 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+
+  min-height: 100vh;
+  line-height: 1.5;
+  background-color: #ccc;
+}
+
+.game-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.player__container,
+.npc__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.player__img {
+}
+
+.player__buttons {
+}
+
+.btn__option,
+.btn__option > img {
+  width: 100px;
+  height: 100px;
+}
+
+.player__win-count,
+.actions__time-counter,
+.npc__win-count {
+  font-size: 30px;
+}
+
+.actions__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.btn__action {
+  width: 120px;
+  height: 50px;
+}
