@@ -4,14 +4,18 @@
 const DOM_ELEMENTS = {
   startBtn: document.getElementById('btn-start'),
   playerBtnContainer: document.querySelector('.player__buttons'),
+  timer: document.getElementById('timer'),
 };
 
 // START GAME
 // 1. Add an event listener for a click on the start button
+// With the help of our global variable, we can access to the elements inside our object this easily
 DOM_ELEMENTS.startBtn.addEventListener('click', () => {
   // 2. Enable the user's game buttons
   // We can do this in 2 ways
+
   // a) We can request for every button, and change its disabled property, which implies to add 3 variables to our global object
+
   // const DOM_ELEMENTS = {
   //   startBtn: document.getElementById('btn-start'),
   //   paperBtn: document.getElementById('btn-paper'),
@@ -27,5 +31,24 @@ DOM_ELEMENTS.startBtn.addEventListener('click', () => {
     // Update the disabled attribute of the button to false
     btn.disabled = false;
   }
+
   // 3. Start timer, should start at 5 seconds and go down
+  // This timer, for each second passed, will reduce by 1, so we need to update our DOM every second until the timer reaches 0
+  let gameTime = 5;
+
+  // We'll use the "setInterval" function to help us execute our logic, this function accepts miliseconds, so 1000ms = 1s
+
+  // "setInterval" does not stop automatically, it will keep executing every second, so we need to stop it manually
+
+  // This function returns an "id", and with the help of "clearInterval", we pass the "id" to "clearInterval"
+
+  const intervalId = setInterval(() => {
+    // We access our timer DOM element, and modify its text, based on our time left
+    gameTime -= 1; // gameTime = gameTime - 1;
+    DOM_ELEMENTS.timer.innerText = gameTime;
+
+    if (gameTime === 0) {
+      clearInterval(intervalId);
+    }
+  }, 1000);
 });
