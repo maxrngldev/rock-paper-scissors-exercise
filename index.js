@@ -40,6 +40,7 @@ DOM_ELEMENTS.startBtn.addEventListener('click', function () {
   // 3. Start timer, should start at 5 seconds and go down
   // This timer, for each second passed, will reduce by 1, so we need to update our DOM every second until the timer reaches 0
   let gameTime = 5;
+  DOM_ELEMENTS.timer.innerText = gameTime;
 
   // We'll use the "setInterval" function to help us execute our logic, this function accepts miliseconds, so 1000ms = 1s
 
@@ -54,6 +55,7 @@ DOM_ELEMENTS.startBtn.addEventListener('click', function () {
 
     if (gameTime === 0) {
       clearInterval(intervalId);
+      // DOM_ELEMENTS.timer.innerText = 5;
     }
   }, 1000);
 });
